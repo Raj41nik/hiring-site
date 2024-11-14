@@ -120,6 +120,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+import os
+STATICFILES_DIRS =os.path.join(BASE_DIR,'static'),
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles_build','static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -134,6 +138,3 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 LOGIN_URL='login_user'
 
-STATICFILES_DIRS= os.path.join(BASE_DIR,'static'),
-
-STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles_build','static')
